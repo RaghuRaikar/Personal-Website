@@ -23,3 +23,13 @@ $(document).ready(function() {
         navigateToSection(1); // Adjust index based on actual section position
     });
 });
+$(document).ready(function(){
+    // Navigation logic
+    $(".cta").click(function(){
+      var targetSection = $(this).attr('href').substring(1);
+      $('html, body').animate({
+        scrollTop: $("#" + targetSection).offset().top
+      }, 1000);
+    });
+  });
+  
